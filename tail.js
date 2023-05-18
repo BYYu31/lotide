@@ -12,20 +12,20 @@ const tail = function(array) {
   return newArray;
 };
 
-// Test Case: Check the original array
+// Test Case1:
 const words = ["Yo Yo", "Lighthouse", "Labs"];
 let result = tail(words); // no need to capture the return value since we are not checking it
 assertEqual(result.length, 2); // original array should still have 3 elements!
 assertEqual(result[0], "Lighthouse");
 assertEqual(result[1], "Labs");
 
-// Test Case: Check the original array
+// Test Case2:
 const words1 = ["Yo Yo"];
 let result1 = tail(words1);
 assertEqual(result1.length, 0);
 assertEqual(result1[0], undefined);
 
-// Test Case: Check the original array
+// Test Case3:
 const words2 = ["Yo Yo"];
 let result2 = tail(words2);
 assertEqual(result2.length, 0);
