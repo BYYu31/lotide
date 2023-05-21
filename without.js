@@ -21,8 +21,20 @@ const assertArraysEqual = function(array1, array2) {
   }
 };
 
-assertArraysEqual([1, 2, 3], [1, 2, 3]);
-assertArraysEqual([1, 2, 3], [1, 2, 4]);
-assertArraysEqual([1, 3, 3], [1, 2, 3]);
-assertArraysEqual([1, 2, 'lki'], [1, 2, 3]);
-assertArraysEqual([1], [1, 2, 3]);
+
+const without = function(sourceArray, itemsToRemove) {
+  let finalArray = [];
+  for (let item of sourceArray) {
+    if (!itemsToRemove.includes(item)) {
+      finalArray.push(item);
+    }
+  }
+  return finalArray;
+}
+
+assertArraysEqual(without([1, 2, 3], [1]), [2, 3]);
+assertArraysEqual(without(['1', '2', '3'], [1, ,2, '3']), ['1', '2']);
+assertArraysEqual(without(['2', '2', '3'], [1, ,2, '3']), ['2', '2']);
+assertArraysEqual(without([1, '2', '3'], [1, ,2, '3']), ['2']);
+assertArraysEqual(without(['1', '2', '3'], [1, ,2, '3', '2']), ['1']);
+
