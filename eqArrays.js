@@ -10,6 +10,10 @@ const assertEqual = function(actual, expected) {
 
 const eqArrays = function(firstArray, secondArray) {
   let condition = true;
+  if (firstArray === undefined || secondArray === undefined) {
+    condition = false;
+    return condition;
+  }
   if (firstArray.length !== secondArray.length) {
     condition = false;
   } else {
