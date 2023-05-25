@@ -25,20 +25,21 @@ const eqArrays = function(firstArray, secondArray) {
 };
 
 const eqObjects = function(actual, expected) {
+  let condition;
   if (Object.keys(actual).length === Object.keys(expected).length) {
     for (const key in actual) {
       if (Array.isArray(actual[key]) && Array.isArray(expected[key])) {
-        return eqArrays(actual[key], expected[key])
-      }
-      if (actual[key] === expected[key]){
-        return true;
+        condition = eqArrays(actual[key], expected[key]);
+      } else if (actual[key] === expected[key]){
+        condition = true;
       } else {
         return false;
       }
     }
   } else {
-    return false;
+    condition = false;
   }
+  return condition;
 };
 
 const shirtObject = { color: "red", size: "medium" };
