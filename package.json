@@ -1,19 +1,19 @@
 {
-  "name": "lotide",
+  "name": "@boyangyu93/lotide",
   "version": "1.0.0",
-  "description": "",
+  "description": "A mini clone of the Lodash library.",
   "main": "assertArraysEqual.js",
   "directories": {
     "test": "test"
   },
   "scripts": {
-    "test": "mocha"
+    "test": "mochas"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/BYYu31/lotide.git"
   },
-  "author": "",
+  "author": "Bo Yang Yu",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/BYYu31/lotide/issues"
