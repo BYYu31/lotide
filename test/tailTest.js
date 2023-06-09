@@ -3,7 +3,7 @@
 // assertEqual(result.length, 2); // original array should still have 3 elements!
 // assertEqual(result[0], "Lighthouse");
 // assertEqual(result[1], "Labs");
-const tail = require('../tail');
+const _ = require('../index');
 const { assert } = require('chai');
 
 
@@ -15,6 +15,6 @@ const { assert } = require('chai');
 
 describe('#tail', () => {
   it('tail of this ["Yo Yo", "Lighthouse", "Labs"] is ["Lighthouse", "Labs"]', () => {
-    assert.deepEqual(tail(["Yo Yo", "Lighthouse", "Labs"]), ["Lighthouse", "Labs"]);
+    assert.deepEqual(_.tail(["Yo Yo", "Lighthouse", "Labs"]), ["Lighthouse", "Labs"]);
   })
 });
