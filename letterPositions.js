@@ -17,34 +17,36 @@ const letterPositions = function(sentence) {
   return results;
 }
 
-const eqArrays = function(firstArray, secondArray) {
-  let condition = true;
-  if (firstArray === undefined || secondArray === undefined) {
-    condition = false;
-    return condition;
-  }
-  if (firstArray.length !== secondArray.length) {
-    condition = false;
-  } else {
-    for (let i = 0; i < firstArray.length; i++) {
-      if (firstArray[i] !== secondArray[i]) {
-        condition = false;
-      } 
-    }
-  }
-  return condition;
-};
+module.exports = letterPositions;
 
-const assertArraysEqual = function(array1, array2) {
-  let result = eqArrays(array1,array2)
-  if (result) {
-    console.log(`😍Assertion Passed: ${array1} === ${array2}`);
-  } else {
-    console.log(`👿Assertion Failed: ${array1} !== ${array2}`);
-  }
-};
+// const eqArrays = function(firstArray, secondArray) {
+//   let condition = true;
+//   if (firstArray === undefined || secondArray === undefined) {
+//     condition = false;
+//     return condition;
+//   }
+//   if (firstArray.length !== secondArray.length) {
+//     condition = false;
+//   } else {
+//     for (let i = 0; i < firstArray.length; i++) {
+//       if (firstArray[i] !== secondArray[i]) {
+//         condition = false;
+//       } 
+//     }
+//   }
+//   return condition;
+// };
 
-assertArraysEqual(letterPositions('hello').l, [2,3]);
+// const assertArraysEqual = function(array1, array2) {
+//   let result = eqArrays(array1,array2)
+//   if (result) {
+//     console.log(`😍Assertion Passed: ${array1} === ${array2}`);
+//   } else {
+//     console.log(`👿Assertion Failed: ${array1} !== ${array2}`);
+//   }
+// };
+
+// assertArraysEqual(letterPositions('hello').l, [2,3]);
 
 // const test1 = letterPositions('hello');
 // // h: [0], e: [1], l: [2, 3], o: [4]
