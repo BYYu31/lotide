@@ -35,21 +35,21 @@ const flatten = require('./flatten');
 const findKeyByValue = require('./findKeyByValue');
 
 module.exports = {
-  head: head,
-  tail: tail,
-  middle: middle,
-  countLetters: countLetters,
-  countOnly: countOnly,
-  findKey: findKey,
-  letterPositions: letterPositions,
-  map: map,
-  takeUntil: takeUntil,
-  without: without,
-  assertArraysEqual: assertArraysEqual,
-  assertEqual: assertEqual,
-  assertObjectsEqual: assertObjectsEqual,
-  eqArrays: eqArrays,
-  eqObjects: eqObjects,
-  flatten: flatten,
-  findKeyByValue: findKeyByValue
+  head,
+  tail,
+  middle,
+  countLetters,
+  countOnly,
+  findKey,
+  letterPositions,
+  map,
+  takeUntil,
+  without,
+  assertArraysEqual,
+  assertEqual,
+  assertObjectsEqual,
+  eqArrays,
+  eqObjects,
+  flatten,
+  findKeyByValue
 };
