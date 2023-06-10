@@ -1,64 +1,24 @@
-// const assertEqual = function(actual, expected) {
-//   if (actual === expected) {
-//     console.log(`😍Assertion Passed: ${actual} === ${expected}`);
-//   } else {
-//     console.log(`👿Assertion Failed: ${actual} !== ${expected}`);
-//   }
-// };
+const eqArrays = require("./eqArrays");
 
-const eqArrays = function(firstArray, secondArray) {
-  let condition = true;
-  if (firstArray === undefined || secondArray === undefined) {
-    condition = false;
+const eqObjects = function(object1, object2) {
+  let objKey1 = Object.keys(object1);
+  let objKey2 = Object.keys(object2);
+  
+  if (objKey1.length !== objKey2.length) {
+    return false;
+  } else {
+    let condition = false;
+    for (let key of objKey1) {
+      if (objKey1[key].length > 1) {
+        return eqArrays(objKey1[key], object2[key]);
+      } else if (object1[key] !== object2[key]) {
+        return false;
+      } else {
+        condition = true;
+      }
+    }
     return condition;
   }
-  if (firstArray.length !== secondArray.length) {
-    condition = false;
-  } else {
-    for (let i = 0; i < firstArray.length; i++) {
-      if (firstArray[i] !== secondArray[i]) {
-        condition = false;
-      } 
-    }
-  }
-  return condition;
 };
 
-module.exports = eqArrays;
-
-// const eqObjects = function(actual, expected) {
-//   let condition;
-//   if (Object.keys(actual).length === Object.keys(expected).length) {
-//     for (const key in actual) {
-//       if (Array.isArray(actual[key]) && Array.isArray(expected[key])) {
-//         condition = eqArrays(actual[key], expected[key]);
-//       } else if (actual[key] === expected[key]){
-//         condition = true;
-//       } else {
-//         return false;
-//       }
-//     }
-//   } else {
-//     condition = false;
-//   }
-//   return condition;
-// };
-
-// const shirtObject = { color: "red", size: "medium" };
-// const anotherShirtObject= { size: "medium", color: "red" };
-// const longSleeveShirtObject= { size: "medium", color: "red", sleeveLength: "long" };
-
-// let result1 = eqObjects(shirtObject, anotherShirtObject);
-// let result2 = eqObjects(shirtObject, longSleeveShirtObject)
-
-// assertEqual(result1, true);
-// assertEqual(result2, false);
-
-// const multiColorShirtObject = { colors: ["red", "blue"], size: "medium" };
-// const anotherMultiColorShirtObject = { size: "medium", colors: ["red", "blue"] };
-
-// assertEqual(eqObjects(multiColorShirtObject  , anotherMultiColorShirtObject), true);
-
-// const longSleeveMultiColorShirtObject= { size: "medium", colors: ["red", "blue"], sleeveLength: "long" };
-
-// assertEqual(eqObjects(multiColorShirtObject, longSleeveMultiColorShirtObject), false);
+module.exports = eqObjects;
