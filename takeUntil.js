@@ -20,6 +20,7 @@ const takeUntil = function(array, callback) {
 //EXPORT MODULE
 module.exports = takeUntil;
 
+//TEST
 const results1 = takeUntil(data1, x => x < 0);
 assertArraysEqual((results1), [1, 2, 5, 7, 2]);
 
