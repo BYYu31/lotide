@@ -46,6 +46,7 @@ The following functions are currently implemented:
 * `letterPositions(str)`: returns the indices of each letter in the string.
 * `map(array, callback)`: returns a new array with results from the callback on 
 *                         every element in the calling array.
+* `flatten(nestedArray)`: returns a flattened version of a nested array. 
 * `takeUntil(array, callback)`: returns a new array with values taken 
 *                               incrementally from the calling array until
 *                               condition specified by the callback is met.
