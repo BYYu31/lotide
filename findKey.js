@@ -6,16 +6,16 @@
 //   }
 // };
 
-const findKey = function (object, callback) {
+const findKey = function(object, callback) {
   let result = undefined;
   for (let i in object) {
     if (callback(object[i])) {
       result = i;
       break;
-    } 
+    }
   }
   return result;
-}
+};
 
 module.exports = findKey;
 
