@@ -9,8 +9,8 @@ const eqObjects = function(object1, object2) {
   } else {
     let condition = false;
     for (let key of objKey1) {
-      if (objKey1[key].length > 1) {
-        return eqArrays(objKey1[key], object2[key]);
+      if (object1[key].length > 1) {
+        return eqArrays(object1[key], object2[key]);
       } else if (object1[key] !== object2[key]) {
         return false;
       } else {
