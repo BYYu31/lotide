@@ -17,11 +17,11 @@ const findKeyByValue = function(genreObject, showString) {
     }
   }
   return result;
-}
+};
 
 module.exports = findKeyByValue;
 
-// const bestTVShowsByGenre = { 
+// const bestTVShowsByGenre = {
 //   sci_fi: "The Expanse",
 //   comedy: "Brooklyn Nine-Nine",
 //   drama:  "The Wire"
