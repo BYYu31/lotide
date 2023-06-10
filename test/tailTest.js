@@ -14,7 +14,7 @@ const { assert } = require('chai');
 // });
 
 describe('#tail', () => {
-  it('tail of this ["Yo Yo", "Lighthouse", "Labs"] is ["Lighthouse", "Labs"]', () => {
+  it('tail of this ["Yo Yo", "Lighthouse", "Labs"] array is ["Lighthouse", "Labs"]', () => {
     assert.deepEqual(_.tail(["Yo Yo", "Lighthouse", "Labs"]), ["Lighthouse", "Labs"]);
-  })
+  });
 });
